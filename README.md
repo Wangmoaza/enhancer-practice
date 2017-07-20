@@ -1,5 +1,15 @@
 # Lab note for enhancer practice session
 
+This project is to practice utilizing DNase-seq, ChIA-PET, and refGene files. I used these three files to get a list of promoter-enhancer interactions.
+
+
+The epigenomic data used here are frome the ENCODE project.
+* DNase-seq : DNaseI Hypersensitivity by Digital DNaseI from ENCODE/University of Washington. K562 Cell Line. Downloaded from [here](http://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeUwDnase/wgEncodeUwDnaseK562RawDataRep1.fastq.gz)
+* ChIA-PET : Chromatin Interaction Analysis Paired-End Tags (ChIA-PET) from ENCODE/GIS-Ruan. K562 Cell Line. Downloded from [here](http://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeGisChiaPet/wgEncodeGisChiaPetK562Pol2InteractionsRep1.bed.gz)
+* refGene.txt: hg19. Downloaded from [here](http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/refGene.txt.gz)
+
+I obtained promoter position from refGene.txt using txStart (+ strand) and txEnd (- strand). Promoter was defined as +- 1000bp from TSS.
+
 ### 2017-07-17
 * parsing data using pandas pandas library
 * doing tutorials
