@@ -27,11 +27,15 @@ I obtained promoter position from refGene.txt using txStart (+ strand) and txEnd
 * except implementing the above two, executed enhancer_prediction.py
 * enhancer_prediction - DONE
 
-[primer3](1) : construct initial primer sequence. surround must-include sequence with []
-[Primer-BLAST](2) : check if primer aligns to other sequences
-[Addgene](3) : find vector sequence. pSTARR-seq-human
-[In-fusion primer](4) : convert PCR primers into in-fusion primer
+[primer3][1] : construct initial primer sequence. surround must-include sequence with []
+[Primer-BLAST][2] : check if primer aligns to other sequences
+[Addgene][3] : find vector sequence. pSTARR-seq-human
+[In-fusion primer][4] : convert PCR primers into in-fusion primer
 
+[1]: https://biotools.umassmed.edu/bioapps/primer3_www.cgi
+[2]: https://www.ncbi.nlm.nih.gov/tools/primer-blast/
+[3]: https://www.addgene.org/71509/
+[4]: http://bioinfo.clontech.com/infusion/convertPcrPrimersInit.do
 
 ~~bye bye~~
 
