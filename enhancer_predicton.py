@@ -21,7 +21,6 @@ def get_data(dhs_file, chip_file, refGene_file):
 			tuple of dhs, chip, promoter data frames
 	"""
 
-
 	# convert dhs narrowPeak file to pandas dataframe
 	# format: chrom / start / end
 	dhs = pd.read_table(dhs_file, sep='\t', header=None, index_col=False,
@@ -84,7 +83,7 @@ def get_data(dhs_file, chip_file, refGene_file):
 
 def match_chip_pro(chip, promoter):
 	""" match promoter-chip-dhs to make data frame of promoter-enhancer interaction
-
+	args:
 		chip (pandas DataFrame): chip-seq data frame
 		promoter (pandas DataFrame): prmoter information data frame
 
@@ -129,23 +128,6 @@ def match_chip_pro(chip, promoter):
 		print "\n*** matchedProm"
 		print matchedProm.head()
 		print matchedProm.shape
-
-	# remove promoter-promoter interaction
-	#cnt = 0
-	#for promIdx, promRow in promoter.iterrows():
-	#	isPromoter = (promRow.chrom == matchedProm.enChrom) & (promRow.promEnd > matchedProm.enStart) & (promRow.promStart < matchedProm.enEnd)
-	#	matchedProm = matchedProm.drop(matchedProm[isPromoter].index)
-	#	if VERBOSE:
-	#		cnt += 1
-	#		if cnt % 5000 == 0:
-	#			print "loop {0}... dataframe shape: {1}".format(cnt, matchedProm.shape)
-	### END - for
-
-	#if VERBOSE:
-	#	print "*** removing promoter-promoter interaction DONE ***"
-	#	print matchedProm.shape
-
-	# match dhs to matchedProm
 
 	return matchedProm
 ### END - match
